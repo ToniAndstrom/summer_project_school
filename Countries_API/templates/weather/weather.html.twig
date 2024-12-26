@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}The Weather
+{% endblock %}
+
+{% block body %}
+
+<body>
+<form method="post">
+    <label for="city">Find the current weather in:</label>
+    <input type="text" name="city" placeholder="city">
+    <button type="submit">Submit</button>
+    </form>
+</body>
+<div class="answer">
+
+</div>
+
+{% endblock %}

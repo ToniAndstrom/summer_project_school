@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.card{
+    height:20rem;
+    width: 50rem;
+    background-color: white;
+    margin:1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style: none;
+    
+}
+.flag{
+    height: 1rem;
+}
+.container{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+}
+p{
+    margin:0.5rem;
+}
+h2{
+    margin-bottom: 0.5rem;
+}
+a{
+    margin-top: 0.5rem;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+    
+}

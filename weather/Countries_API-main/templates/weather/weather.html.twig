@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}The Weather{% endblock %}
+
+{% block body %}
+<body>
+<h2>Find the Current Weather</h2>
+<form method="post" action="{{ path('app_weather') }}">
+<label for="city">Enter the city:</label>
+<input type="text" id="city" name="city" placeholder="Type city name here" required>
+<button type="submit">Submit</button>
+</form>
+
+{% if weatherData is defined %}
+<div class="weather-results">
+<h3>Weather for {{ city }}</h3>
+{% if weatherData.current %}
+<p><strong>Temperature:</strong> {{ weatherData.current.temp_c }}°C</p>
+<p><strong>Condition:</strong> {{ weatherData.current.condition.text }}</p>
+<p><strong>Wind Speed:</strong> {{ weatherData.current.wind_kph }} kph</p>
+<p><strong>Humidity:</strong> {{ weatherData.current.humidity }}%</p>
+<!-- Add more weather details as needed -->
+{% else %}
+<p>Weather data is not available for the specified city.</p>
+{% endif %}
+</div>
+{% endif %}
+</body>
+{% endblock %}

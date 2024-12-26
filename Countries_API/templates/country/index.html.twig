@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Countries_api
+{% endblock %}
+
+{% block body %}
+
+<body>
+	
+
+	<h1>Country Data</h1>
+
+	{% for data in data %}
+	
+		<li>
+			<div class="card">
+				<h2>{{data.name.common}}</h2>
+
+				<p>Region:{{data.region}}</p>
+				<p class="flag">Flag:{{data.flag}}</p>
+				<p>Population:{{data.population}}</p>
+				<p>{{data|map(p => "{#capital}")}}</p>
+			
+				
+				<a href="{{data.maps.googleMaps}}">GoogleMaps</a>
+
+			
+
+
+			</div>
+
+		</li>
+
+
+	{% endfor %}
+	</body>
+
+{% endblock %}
